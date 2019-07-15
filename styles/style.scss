@@ -1,0 +1,46 @@
+@import "./variables";
+@mixin flex-center($content) {
+  display: flex;
+  justify-content: $content;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  height: 10vh;
+  background: $main-color;
+}
+
+.nav-links {
+  @include flex-center(space-around);
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+.landing {
+  height: 90vh;
+  @include flex-center(center);
+  h1 {
+    margin: 100px;
+    font-size: 50px;
+    color: $h1-color;
+  }
+}
+
+@import "./mobile";
